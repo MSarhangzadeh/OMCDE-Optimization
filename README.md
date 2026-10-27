@@ -45,7 +45,7 @@ All objective functions have known minimum value `0`. Exact zero printed by a fl
 
 ![Five benchmark convergence panels](results/convergence_d30.svg)
 
-The vertical dashed line indicates the 75% stage switch. The solid lines are **median best-so-far fitness** across five independent runs; transparent lines show individual runs. Values are floored at 1e-15 for readability on the log axis. Full results, timing, and convergence samples are saved in [`results/`](results/).
+The vertical dashed line indicates the 75% stage switch. The solid lines are **median best-so-far fitness** across five independent runs; transparent lines show individual runs. Values are floored at 1e-15 for readability on the log axis. The 25 run-level measurements and summary are committed in [`results/`](results/). To regenerate the sampled convergence-curve JSON (and refresh timings on your machine), run `python run_benchmarks.py`.
 
 ## Install and run
 
@@ -100,7 +100,7 @@ omcde.py                      Importable vectorized OMCDE optimizer
 run_benchmarks.py             Reproducible 30D × 5-functions × 5-seeds driver
 results/benchmark_d30_runs.csv       25 individual runs
 results/benchmark_d30_summary.csv    Means, SDs, and extrema
-results/benchmark_d30_curves.json    Sampled convergence curves
+results/benchmark_d30_curves.json    Created by run_benchmarks.py (not tracked)
 results/convergence_d30.svg          Five-panel benchmark visualization
 results/omcde_workflow.svg           Method diagram
 tests/test_omcde.py           Equation and behavior tests
